@@ -18,10 +18,15 @@
   <ItemGroup>
     <Compile Include="index.js" />
     <Compile Include="Chat\Server\chatSocket.js" />
+    <Compile Include="Lib\Client\js\header.js" />
+    <Compile Include="Lib\Client\js\jquery-2.1.1.min.js" />
     <Content Include="Chat\Client\css\chat.css" />
     <Content Include="Chat\Client\html\chat.html" />
     <Compile Include="Chat\Client\js\chat.js" />
+    <Content Include="Lib\Client\css\header.css" />
+    <Content Include="Lib\Client\html\commonHeader.html" />
     <Content Include="package.json" />
+    <Content Include="scripts\export.bat" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Chat\Client\" />
@@ -30,6 +35,12 @@
     <Folder Include="Chat\Client\js\" />
     <Folder Include="Chat\" />
     <Folder Include="Chat\Server\" />
+    <Folder Include="Lib\" />
+    <Folder Include="Lib\Client\" />
+    <Folder Include="Lib\Client\css\" />
+    <Folder Include="Lib\Client\html\" />
+    <Folder Include="Lib\Client\js\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />

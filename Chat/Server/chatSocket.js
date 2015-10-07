@@ -1,8 +1,4 @@
-var startApplication = function(socketName) {
-
-	var chat = exports.applicationSocket = socketName;
-	
-	chat.on('connection', function(socket){
+var onConnection = function(socket){
 		console.log('user connected');
 		
 		socket.broadcast.emit('chat message', 'hi !');
@@ -14,10 +10,8 @@ var startApplication = function(socketName) {
   
 		socket.on('chat message', function(msg){
 			console.log('message: ' + msg);
-			chat.emit('chat message', msg);
+			socket.nsp.emit('chat message', msg);
 		});
-	}); 
 };
 
-exports.startApplication = startApplication;
-exports.applicationSocket = null;
+module.exports = onConnection;
